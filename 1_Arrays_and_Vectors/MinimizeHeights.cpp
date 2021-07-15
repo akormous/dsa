@@ -15,7 +15,7 @@ class Solution {
         int maxEle, minEle;
         // getting the difference between max and min height
         int res = arr[n-1] - arr[0];
-        for(int i=0; i<n; i++)
+        for(int i=1; i<n; i++)
         {
             if(arr[i] >= k && arr[n-1] >= k)
             {
