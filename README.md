@@ -7,7 +7,7 @@ If you are not familiar with C++, [click here](https://github.com/jwasham/coding
 
 ---
 
-![practice_on_leetcode.jpg](<img src="meme.jpg" height="200" width="200" />)
+![practice_on_leetcode.jpg](<img src="meme.jpg" style="height: 200px; width: 200px" />)
 
 ---
 This repository contains solutions to the problems that I have done on leetcode, geeksforgeeks and... you know all the other websites.
