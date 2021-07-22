@@ -7,7 +7,7 @@ If you are not familiar with C++, [click here](https://github.com/jwasham/coding
 
 ---
 
-![practice_on_leetcode.jpg] (/meme/meme.jpg)
+![practice_on_leetcode.jpg](meme.jpg)
 
 ---
 This repository contains solutions to the problems that I have done on leetcode, geeksforgeeks and... you know all the other websites.
