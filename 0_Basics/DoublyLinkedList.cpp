@@ -2,7 +2,8 @@
 using namespace std;
 
 /*
-SINGLY LINKED LIST- each node points to next node
+DOUBLY LINKED LIST- every node has a pointer to its previous and next node
+                    advantage - reverse traversal from  anywhere in the list
 TIME COMPLEXITY- 
         Access - O(n)
         Search - O(n)
@@ -11,20 +12,21 @@ TIME COMPLEXITY-
 SPACE COMPLEXITY- O(n)
 */
 
-// simple structure of a Node in a linked list
+// simple structure of a Node in a doubly linked list
 struct Node {
     int val;
     struct Node* next;
+    struct Node* prev;
 };
 
 // defining a class LinkedList where all the functionalities will be defined
-class LinkedList {
+class DoublyLinkedList {
     Node* head; // reference to the head of the linked list
     Node* tail; // reference to the tail of the linked list
     int size;   // number of elements in the linked list
     public:
     // default constructor
-    LinkedList() {
+    DoublyLinkedList() {
         head = NULL;
         tail = NULL;
         size = 0;
@@ -34,6 +36,7 @@ class LinkedList {
         // creating a new node with the provided value
         Node* temp = new Node;
         temp->val = val;
+        temp->prev = nullptr;
         // if there are no elements in the list
         if(head == NULL) {
             temp->next = nullptr;
@@ -42,9 +45,38 @@ class LinkedList {
         // else add it to the front
         else {
             temp->next = head;
+            head->prev = temp;
         }
         head = temp;
-        size++;
+    }
+    // insert an element at a specific position
+    // pos represents position in linked list
+    void insertAfterPos(int val, int pos) {
+        if(pos < 0) {
+            cout<<"Invalid position"<<endl;
+            return;
+        }
+        Node* temp = new Node;
+        temp->val = val;
+        if(head == NULL) {
+            temp->next = nullptr;
+            temp->prev = nullptr;
+        }
+        else {
+            Node* cur = head;
+            while(pos--) {
+                if(cur == nullptr) {
+                    cout<<"Linked list is not long enough!"<<endl;
+                    return;
+                }
+                cur = cur->next;
+            }
+            temp->prev = cur->prev;
+            temp->next = cur;
+            if(cur->prev != nullptr)
+                cur->prev->next = temp;
+            cur->prev = temp;
+        }
     }
     // delete the node with given value
     void deleteNode(int val) {
@@ -52,8 +84,8 @@ class LinkedList {
         // if head is to be deleted
         if(cur->val == val) {
             head = head->next;
+            head->prev = nullptr;
             delete(cur);
-            size--;
             return;
         }
         // search for the value
@@ -61,9 +93,9 @@ class LinkedList {
             if(cur->next->val == val) {
                 Node* tmp = cur->next;
                 cur->next = tmp->next;
+                tmp->next->prev = cur;
                 cout<<"Deleting node with value - "<<tmp->val<<endl;
                 delete(tmp);
-                size--;
                 return;
             }
             cur = cur->next;
@@ -76,13 +108,21 @@ class LinkedList {
     // traverse the list and display values
     void traverseLL() {
         Node* cur = head;
-        cout<<"Size of Linked List - "<<size<<endl;
         while(cur != nullptr) {
-            cout<<cur->val<<" ";
+            cout<<cur->val<<" => ";
             cur = cur->next;
         }
-        // using tail
-        cout<<endl<<"Value at last element of linked list - "<<tail->val<<endl;
+        cout<<"nullptr"<<endl;
+    }
+
+    // reverse traversal the list from tail
+    void reverseTraversal() {
+        Node* cur_tail = tail;
+        while(cur_tail != nullptr) {
+            cout<<cur_tail->val<<" => ";
+            cur_tail = cur_tail->prev;
+        }
+        cout<<"nullptr"<<endl;
     }
 
 };
@@ -90,9 +130,9 @@ class LinkedList {
 
 int main() {
     // declaring a linked list object
-    LinkedList ll;
+    DoublyLinkedList ll;
     // a sample array to feed values in the linked lst
-    vector<int> arr = {4, 4, 23, 667, 42, 89, -123, 65236, 7637, 8547, 0};
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
     for(int i = 0; i < arr.size(); i++)
         ll.insert(arr[i]);
     
@@ -102,6 +142,13 @@ int main() {
     ll.deleteNode(num_to_delete);
     cout<<endl<<"After deleting"<<endl;
     ll.traverseLL();
-    
+    cout<<endl;
+    cout<<"Reverse traversal"<<endl;
+    ll.reverseTraversal();
+    cout<<endl;
+    cout<<"Inserting a node after 4th position"<<endl;
+    ll.insertAfterPos(-99, 4);
+    ll.traverseLL();
+    cout<<endl;
     return 0;
 }
