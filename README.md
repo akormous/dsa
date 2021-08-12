@@ -19,4 +19,6 @@ This repository contains solutions to the problems that I have done on leetcode,
 
 [1_Arrays_and_Vectors](https://github.com/akormous/super-pro-dsa/tree/master/1_Arrays_and_Vectors) - problems of arrays, vectors, matrices
 
+[3_Strings](https://github.com/akormous/super-pro-dsa/tree/master/3_Strings) - problems of strings
+
 [Big O Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14) - Time and Space complexities you definitely need to know
