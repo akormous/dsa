@@ -17,4 +17,6 @@ This repository contains solutions to the problems that I have done on leetcode,
 
 [0_Basics](https://github.com/akormous/super-pro-dsa/tree/master/0_Basics) - contains implementation of all the basic Data Structures and Algorithms
 
+[1_Arrays_and_Vectors](https://github.com/akormous/super-pro-dsa/tree/master/1_Arrays_and_Vectors) - problems of arrays, vectors, matrices
+
 [Big O Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14) - Time and Space complexities you definitely need to know
