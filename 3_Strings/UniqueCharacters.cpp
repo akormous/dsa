@@ -33,9 +33,32 @@ bool isUnique(string s) {
     return true;
 }
 
+// a simpler and more understandable solution is to define a bool array of the possible character set
+// ASCII or Unicode
+// in this solution string is considered to contain only ASCII characters
+// time complexity - O(n)
+// space complexity - O(1)
+bool isUnique2(string s) {
+    // check if length of string is greater than the total number of unique characters in the string
+    if(s.length() > 128)
+        return false;
+    
+    // a bool array of 128 size will do the work
+    bool visited[128];
+    memset(visited, false, sizeof(visited));
+    for(int i = 0; i < s.length(); i++) {
+        // check if we have visited the character
+        if( visited[s[i]] )
+            return false;
+        // visit the character
+        visited[s[i]] = true;
+    }
+    return true;
+}
+
 int main() {
     // solution
-    if(isUnique("abadc")) {
+    if(isUnique2("badcc")) {
         cout<<"Yes";
     }
     else {
