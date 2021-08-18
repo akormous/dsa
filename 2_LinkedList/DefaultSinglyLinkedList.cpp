@@ -3,18 +3,8 @@ using namespace std;
 
 /*
 
-Question - 
-Remove duplicates from an unsorted linked list.
-
-Keep track of the numbers using a hash set
-
-If temp buffer is not  allowed, what will be the approach ?
-Ans:
-Another node will repeatedly traverse the rest of the linked list
-and remove the duplicate elements
-O(n ^ 2)
-This is a classic example of space - time tradeoff
-
+Template for default singly linked list
+with some helper functions
 
 */
 
@@ -40,7 +30,7 @@ class LinkedList {
         }
         head = temp;
     }
-    // delete the first occurence a node with given data
+    // delete the first occurence of a node with given data
     void deleteNode(int d) {
         if(head == nullptr) {
             cout<<"EMPTY LINKED LIST!"<<endl;
@@ -64,30 +54,6 @@ class LinkedList {
         cout<<"NOT FOUND!";
     }
 
-    // remove duplicates from a linked list
-    void removeDuplicates() {
-        // hash set to keep track of the numbers
-        unordered_set<int> hashSet;
-        // traverse the linked list and check if the number is already there in the set
-        Node* cur = head;
-        Node* prev = nullptr;
-        while(cur != nullptr) {
-            // if the data is present in the hashSet
-            if(hashSet.find(cur -> data) != hashSet.end()) {
-                // skip this Node in ll and delete it
-                prev -> next = cur -> next;
-                delete cur;
-            }
-            else {
-                // insert the data in the hashSet
-                // set prev = cur
-                hashSet.insert(cur -> data);
-                prev = cur;
-            }
-            cur = prev -> next;
-        }
-    }
-
     // print Linked List
     void print() {
         Node* cur = head;
@@ -98,24 +64,30 @@ class LinkedList {
         cout<<endl;
     }
 
+    // solution function here
+
 };
 
 int main() {
-    // solution
     LinkedList l1;
-    l1.insert(1);
-    l1.insert(1);
+    // inserted random numbers in the linked list
     l1.insert(1);
     l1.insert(2);
-    l1.insert(1);
-    l1.insert(1);
     l1.insert(3);
-    l1.insert(1);
-    l1.insert(1);
     l1.insert(4);
     l1.insert(5);
+    l1.insert(6);
+    l1.insert(7);
+    l1.insert(8);
+    l1.insert(9);
+    l1.insert(10);
+    l1.insert(11);
     l1.print();
-    l1.removeDuplicates();
+    // call solution function here
+    
+
     l1.print();
+    
+
     return 0;
 }
