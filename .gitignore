@@ -1,3 +1,4 @@
 *.exe
 .vscode
 cp_try.cpp
+example.cpp
