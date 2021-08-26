@@ -23,4 +23,7 @@ This repository contains solutions to the problems that I have done on leetcode,
 
 [3_Strings](https://github.com/akormous/super-pro-dsa/tree/master/3_Strings) - problems on strings
 
+[4_Stacks_and_Queues](https://github.com/akormous/super-pro-dsa/tree/master/4_Stacks_and_Queues) - problems on Stacks and Queues
+
+
 [Big O Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14) - Time and Space complexities ez
