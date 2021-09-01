@@ -1,5 +1,6 @@
 # Trees and Graphs
 
+<code>
 ---
 <p align="center">
 <span style="color:red">DISCLAIMER</span>
@@ -54,3 +55,4 @@ If you don't know what a tree is, don't read the rest of this page.
 * It has <span style="color:cyan"> 2<sup>k</sup> - 1 </span> nodes, where k = number of levels in the tree
 </details>
 
+</code>
