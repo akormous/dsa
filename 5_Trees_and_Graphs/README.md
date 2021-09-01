@@ -1,13 +1,8 @@
 # Trees and Graphs
 
-<code>
 ---
-<p align="center">
-<span style="color:red">DISCLAIMER</span>
-</p>
-<p align="center">
-If you don't know what a tree is, don't read the rest of this page.
-</p>
+
+DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 ---
 
@@ -26,7 +21,7 @@ If you don't know what a tree is, don't read the rest of this page.
     <summary>Binary Search Tree</summary>
 
 * It is a binary tree but follows a simple rule
-* <span style="color:yellow">all left descendants </span> <= the node < <span style="color:orange"> all right descendants </span>
+* :large_blue_diamond: all left descendants <= the node <  all right descendants :large_orange_diamond: 
 * The equality can appear on the left or right side, depends on the situation
 </details>
 
@@ -43,7 +38,7 @@ If you don't know what a tree is, don't read the rest of this page.
     <summary>Full Binary Tree</summary>
 
 * A Binary Tree in which every node has either 0 or 2 child nodes
-* <span style="color:red">None of the node has 1 child</span>
+* :exclamation: None of the node has 1 child
 </details>
 
 
@@ -52,7 +47,6 @@ If you don't know what a tree is, don't read the rest of this page.
 
 * A Binary Tree
 * which is Complete and Full
-* It has <span style="color:cyan"> 2<sup>k</sup> - 1 </span> nodes, where k = number of levels in the tree
-</details>
 
-</code>
+:star: It has 2<sup>k</sup> - 1 nodes, where k = number of levels in the tree
+</details>
