@@ -70,6 +70,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 - Replace the minimum element at the top with the bottommost rightmost element
 - Fix the tree by swapping this value with one of the children till the min-heap property is restored
 - Time Complexity - O(n)
+
 </details>
 
 
