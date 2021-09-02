@@ -50,3 +50,29 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 :star: It has 2<sup>k</sup> - 1 nodes, where k = number of levels in the tree
 </details>
+
+
+## Binary Heaps
+
+<details>
+    <summary>Min-heap</summary>
+
+* A min-heap is a *complete* binary tree, where each node is smaller than its children
+* The root is the minimum element in the tree
+* There are 2 key operations on min-heap `insert` and `extract_min`
+
+`insert`
+- Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
+- Fix the tree by swapping the new value with its parent till an appropriate spot is found
+- Time Complexity - O(n)
+
+`extract_min`
+- Replace the minimum element at the top with the bottommost rightmost element
+- Fix the tree by swapping this value with one of the children till the min-heap property is restored
+- Time Complexity - O(n)
+</details>
+
+
+
+
+
