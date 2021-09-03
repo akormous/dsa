@@ -28,5 +28,6 @@ This repository contains solutions to the problems that I have done on leetcode,
 
 [4_Stacks_and_Queues](https://github.com/akormous/super-pro-dsa/tree/master/4_Stacks_and_Queues) - problems on Stacks and Queues
 
+[5_Trees_and_Graphs](https://github.com/akormous/super-pro-dsa/tree/master/5_Trees_and_Graphs) - problems on Trees, Graphs, Tries, Heaps
 
 [Big O Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14) - Time and Space complexities ez
