@@ -12,7 +12,7 @@ If you are familiar with C++ but don't know STL, [click here](https://medium.com
 
 ---
 
-![practice_on_leetcode.jpg](meme.jpg "Instead of looking at this meme, invest your time in practicing on leetcode")
+![practice_on_leetcode.jpg](Resources/meme.jpg "Instead of looking at this meme, invest your time in practicing on leetcode")
 
 ---
 

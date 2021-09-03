@@ -68,6 +68,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 * A min-heap is a *complete* binary tree, where each node is smaller than its children
 * The root is the minimum element in the tree
 * There are 2 key operations on min-heap `insert` and `extract_min`
+* [Min Heap Implementation](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/MinHeap.cpp)
 
 `insert`
 - Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
@@ -88,6 +89,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 * A max-heap is a *complete* binary tree, where each node is larger than its children
 * The root is the maximum element in the tree
 * There are 2 key operations on max-heap `insert` and `extract_max`
+* [Max Heap Implementation](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/MaxHeap.cpp)
 
 `insert`
 - Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
@@ -100,5 +102,34 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 - Time Complexity - O(logn)
 
 </details>
+
+## Tries
+
+<details>
+    <summary>What is a Trie ?</summary>
+
+* aka Prefix Tree
+* It is a type of a search tree
+* A trie is an _n-ary_ tree in which characters are stored at each node
+* Words can be re _trie_ ved by traversing down a branch
+</details>
+
+<details>
+    <summary>Structure</summary>
+
+* Each trie has an empty root node, with links to other nodes - one for each possible alphabetic value
+* Each node contains an array of pointers to child nodes - one for each possible alphabetic value
+* :exclamation:NOTE - The size of the trie is directly correlated to the size of the alphabet being represented by the data structure
+* Every node in trie (including the root node) at least has these 2 aspects
+    - A value, which might be NULL
+    - An array of reference to child nodes which also might be NULL
+
+* [Trie Implementation](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/Trie.cpp)
+
+![Trie](../Resources/Trie.png "Trie Data Structure Example")
+
+</details>
+
+
 
 
