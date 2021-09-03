@@ -55,6 +55,14 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 ## Binary Heaps
 
 <details>
+    <summary>Advantages of Heap over Array</summary>
+
+* O(logn) to insert in heap, but O(n) to insert in sorted array
+* O(logn) to extract min / max from heap, but O(n) in array
+* O(1) to find min / max from heap, but O(n) in array
+</details>
+
+<details>
     <summary>Min-heap</summary>
 
 * A min-heap is a *complete* binary tree, where each node is smaller than its children
@@ -64,16 +72,33 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 `insert`
 - Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
 - Fix the tree by swapping the new value with its parent till an appropriate spot is found
-- Time Complexity - O(n)
+- Time Complexity - O(logn)
 
 `extract_min`
 - Replace the minimum element at the top with the bottommost rightmost element
 - Fix the tree by swapping this value with one of the children till the min-heap property is restored
-- Time Complexity - O(n)
+- Time Complexity - O(logn)
 
 </details>
 
 
+<details>
+    <summary>Max-heap</summary>
 
+* A max-heap is a *complete* binary tree, where each node is larger than its children
+* The root is the maximum element in the tree
+* There are 2 key operations on max-heap `insert` and `extract_max`
+
+`insert`
+- Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
+- Fix the tree by swapping the new value with its parent till an appropriate spot is found
+- Time Complexity - O(logn)
+
+`extract_min`
+- Replace the maximum element at the top with the bottommost rightmost element
+- Fix the tree by swapping this value with one of the children till the max-heap property is restored
+- Time Complexity - O(logn)
+
+</details>
 
 

@@ -74,7 +74,7 @@ class MinHeap {
 
         // if left index is valid 
         // and if left is smaller than root
-        if(l < heapSize && heapArr[l] < heapArr[i])
+        if(l < heapSize && heapArr[l] < heapArr[smallest])
             smallest = l;
         
         // if right index is valid 
