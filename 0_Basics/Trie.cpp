@@ -31,9 +31,8 @@ class TrieNode {
 
 // a class implementing all function on a Trie such as insert, delete, search
 class Trie {
-    private:
-    TrieNode* root;
     public:
+    TrieNode* root;
 
     Trie() {
         root = new TrieNode();
@@ -80,12 +79,27 @@ class Trie {
         return (crawler -> isEOW);
     }
 
-    // print all words in the trie
-    void printAll() {
-        
-        cout<<endl;
-    }
 };
+
+
+
+// print all words in the trie
+void printAll(TrieNode* node, string prefix) {
+    if(node -> isEOW)
+        cout<<prefix<<endl;
+    
+    for(int i = 0; i < ALPHABET_SIZE; ++i) {
+        // if there is a branch 
+        if(node -> children[i] != nullptr) {
+            // append the character to the prefix
+            prefix += char('a' + i);
+            // call printAll for that child
+            printAll(node -> children[i], prefix);
+            // remove the last character, aka backtracking
+            prefix = prefix.substr(0, prefix.size() - 1);
+        }    
+    }
+}
 
 
 int main() {
@@ -108,7 +122,6 @@ int main() {
     cout<<t1 -> search(s)<<endl;
 
 
-    t1 -> printAll();    
-
+    printAll(t1 -> root, "");
     return 0;
 }
