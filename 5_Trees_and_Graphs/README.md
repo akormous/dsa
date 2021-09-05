@@ -163,3 +163,13 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 - A graph containing 0 cycles is an acyclic graph
 </details>
 
+
+## Topological Sort
+- It is only for Directed Acyclic Graphs (DAG)
+- It is a linear ordering of vertices such that for every directed edge _(u,v)_ , vertex _u_ comes before _v_ in the ordering
+
+<details>
+    <summary>Applications</summary>
+
+- Finding the order of installation of dependencies in any project (Software, Hardware, Automobile Manufacturing and whatever you can think of as a DAG)
+</details>
