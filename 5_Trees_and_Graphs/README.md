@@ -6,9 +6,11 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 ---
 
-*A Binary Tree is a Tree, but a Tree is not a Binary Tree* - **Barack Obama**
+*A Binary Tree is a Tree, but a Tree is not a Binary Tree* - **Spongebob Squarepants**
 
 ---
+
+# Trees
 
 <details>
     <summary>Binary Tree</summary>
@@ -130,6 +132,34 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 </details>
 
+---
 
+*A tree is actually a type of graph, but not all graphs are trees* - **Doge**
 
+---
+
+# Graphs
+
+- A tree is a connected graph without cycles.
+- A graph is a collection of nodes with edges between them
+<details>
+    <summary>Directed and Undirected</summary>
+
+- Directed edge, one way
+- Undirected edge, two way
+</details>
+
+<details>
+    <summary>Connected and Disconnected</summary>
+
+- If there is a path from any point to any other point in the graph, it is called a connected graph
+- If there exists multiple disconnected vertices and edges, then it is called a disconnected graph
+</details>
+
+<details>
+    <summary>Cyclic and Acyclic</summary>
+
+- If a graph contains cycles, then it is called a cyclic graph
+- A graph containing 0 cycles is an acyclic graph
+</details>
 

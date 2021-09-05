@@ -1,9 +1,9 @@
 
 # Super-pro-DSA
 
-## Everything here is in C++
-
 [Click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for good luck :wink:
+
+## Everything here is in C++
 
 If you are not familiar with C++, [click here](https://github.com/jwasham/coding-interview-university/blob/main/extras/cheat%20sheets/Cpp_reference.pdf)
 
