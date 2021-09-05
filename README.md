@@ -3,6 +3,8 @@
 
 ## Everything here is in C++
 
+[Click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for good luck :wink:
+
 If you are not familiar with C++, [click here](https://github.com/jwasham/coding-interview-university/blob/main/extras/cheat%20sheets/Cpp_reference.pdf)
 
 If you are familiar with C++ but don't know STL, [click here](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
