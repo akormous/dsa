@@ -1,7 +1,7 @@
 
 # Super-pro-DSA
 
-[Click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for good luck :wink:
+### [Click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for good luck :wink:
 
 ## Everything here is in C++
 
