@@ -7,6 +7,10 @@ Check if left child is less than the root node
 Check if right child is greater than the root node
 
 Recurse for subtrees
+
+The catch is that the left grandchildren of a node
+must be lesser than that node as well
+So for this we need a minimum and maximum that will validate a left or right child
 */
 
 // { Driver Code Starts
@@ -35,15 +39,19 @@ class Solution
 {
     public:
     //Function to check whether a Binary Tree is BST or not.
-    bool isBST(Node* root) 
-    {
+    bool isBSTUtility(Node* root, int minimum, int maximum) {
         if(root == NULL)
             return true;
-        if((root -> left) && root -> left -> data > root -> data)
+
+        if(root -> data < minimum || root -> data > maximum)
             return false;
-        if((root -> right) && root -> right -> data < root -> data)
-            return false;
-        return isBST(root -> left) && isBST(root -> right);
+
+        return isBSTUtility(root -> left, minimum, root -> data - 1) &&
+                isBSTUtility(root -> right, root -> data + 1, maximum);
+    }
+    bool isBST(Node* root) 
+    {
+        return isBSTUtility(root, INT_MIN, INT_MAX);
     }
 };
 
