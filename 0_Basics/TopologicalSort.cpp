@@ -2,6 +2,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+
+Theory:
+1. Only valid for Directed Acyclic Graphs (DAG)
+
+Algorithm:
+
+1. Count the number of inbound links to every node
+2. Start from the node which has 0 inbound links
+3. Process this node, means, decrease the inbound links of all nodes connected to this one
+4. Find the next node which has 0 inbound links, repeat the process
+*/
+
  // } Driver Code Ends
 class Solution
 {
@@ -9,6 +22,7 @@ class Solution
 	//Function to return list containing vertices in Topological order. 
 	vector<int> topoSort(int V, vector<int> adj[]) 
 	{
+        // this will store the final topological sort order
 	    vector<int> result;
 
         // the next node which is to be processed
