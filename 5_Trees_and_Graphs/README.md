@@ -98,7 +98,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 - Fix the tree by swapping the new value with its parent till an appropriate spot is found
 - Time Complexity - O(logn)
 
-`extract_min`
+`extract_max`
 - Replace the maximum element at the top with the bottommost rightmost element
 - Fix the tree by swapping this value with one of the children till the max-heap property is restored
 - Time Complexity - O(logn)
