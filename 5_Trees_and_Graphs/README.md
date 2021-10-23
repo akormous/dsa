@@ -134,6 +134,75 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 ---
 
+### Introduction to Fenwick and Segment Trees
+
+- Consider an `arr[0 ... n-1]`
+- We want to do 2 operations on this array
+    - Compute the sum of first _i_ elements
+    - Modify the value of a specified element `arr[i] = x` where `0 <= i <= n-1`
+- Simple solution is to run a loop for calculating sum `O(n)` and modify value by simple indexing, so `O(1)`
+- What if we want to perform both operations in `O(logn)`
+- Recommended reading: Efficient Bit Operations
+- Continue reading
+
+---
+## Segment Tree
+
+<details>
+    <summary></summary>
+</details>
+
+## Fenwick Tree / Binary Indexed Tree
+
+<details>
+    <summary>Representation</summary> 
+
+- It is represented as an array
+- Let the array be `BITree[]`
+- The size of the Binary Indexed tree is equal to the size of input array
+</details>
+
+<details>
+    <summary>Construction</summary> 
+
+- Initialize the `BITree[]` as 0
+- Then we call `update()` for all the indexes
+</details>
+<details>
+    <summary>Operations</summary>
+
+There are 2 operations
+
+1. `getSum(x)` - Returns the sum of the subarray `arr[0 ... x]`
+    - Initialize the output `sum` as `0`, the current index as `x + 1`
+    - Do following while the current index is greater than `0`
+        - Add `BITree[index]` to `sum`
+        - Go to the parent of `index`
+            - How to go to the parent ? By removing the right most set bit
+            - `index` = `index - (index & (-index))`
+    - Return `sum`
+![Fenwick getSum()](../Resources/FenwickGetSum.png "Fenwick getSum()")
+2. `update(x, val)` - Update the Binary Indexed Tree by performing `arr[index] += val`, it will make changes to `BITree[]`
+    - Initialize current index as `x + 1`
+    - Do the following while the current index is smaller than or equal to `n`
+        - Add the `val` to `BITree[index]`
+        - Go to the next element of `BITree[index]`
+            - The next element can be obtained by incrementing the last set bit of the current index
+            - `index = index + (index & (-index))`
+![Fenwick update()](../Resources/FenwickUpdate.png "Fenwick update()")
+</details>
+
+<details>
+    <summary>Applications</summary>
+
+- To get prefix sum of an array in `O(logn)` time
+- To update the prefix sum array in `O(logn)` time
+</details>
+
+[Fenwick Tree Implementation](https://github.com/akormous/super-pro-dsa/blob/master/5_Trees_and_Graphs/FenwickTree.cpp)
+
+---
+
 *A tree is actually a type of graph, but not all graphs are trees* - **Doge**
 
 ---
