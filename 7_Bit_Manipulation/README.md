@@ -23,6 +23,19 @@ DISCLAIMER: If you don't know what a binary number is, then don't read the rest 
     <summary>How are negative numbers stored in memory?</summary>
 
 [Read this](https://www.geeksforgeeks.org/how-the-negative-numbers-are-stored-in-memory/)
-
-
 </details>
+
+---
+## Tricks
+<details>
+    <summary>Multiplication by 2^x</summary>
+
+- Lets calculate 0110 * 2
+- which is 0110 + 0110 = 1100
+- observe that all the bits are shifted by 1 bit to the left
+- `binary_numer * 2` is equivalent to `binary_number << 1`
+- Further results, what if I want to multiply binary number with 2^23 ?
+- Simply, shift 23 bits to the left, which is `binary_number << 23`
+</details>
+
+
