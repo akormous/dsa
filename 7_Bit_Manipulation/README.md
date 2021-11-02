@@ -25,6 +25,22 @@ DISCLAIMER: If you don't know what a binary number is, then don't read the rest 
 [Read this](https://www.geeksforgeeks.org/how-the-negative-numbers-are-stored-in-memory/)
 </details>
 
+<details>
+    <summary>Rules</summary>
+
+|Equation|Result|
+| --- | --- |
+|`x ^ 0`|`x`|
+|`x ^ 1`|`~x`|
+|`x ^ x`|`0`|
+|`x & 0`|`0`|
+|`x & 1`|`x`|
+|`x & x`|`x`|
+|`x \| 0`|`x`|
+|`x \| 1`|`1`|
+
+
+</details>
 ---
 ## Tricks
 <details>
