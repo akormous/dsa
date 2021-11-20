@@ -13,6 +13,8 @@ Algorithm:
 2. Start from the node which has 0 inbound links
 3. Process this node, means, decrease the inbound links of all nodes connected to this one
 4. Find the next node which has 0 inbound links, repeat the process
+
+TIEM COMPLEXITY - O(V + E)
 */
 
  // } Driver Code Ends
