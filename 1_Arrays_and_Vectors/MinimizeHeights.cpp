@@ -6,7 +6,11 @@ using namespace std;
 
  // } Driver Code Ends
 // User function template for C++
+/*
 
+Question: Minimize the heights of towers by adding or subtracting k from each tower once
+
+*/
 class Solution {
   public:
     int getMinDiff(int arr[], int n, int k) {
