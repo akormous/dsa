@@ -27,7 +27,7 @@ This repository contains solutions to the problems that I have done on leetcode,
 | [3_Strings](https://github.com/akormous/super-pro-dsa/tree/master/3_Strings) | problems on strings |
 | [4_Stacks_and_Queues](https://github.com/akormous/super-pro-dsa/tree/master/4_Stacks_and_Queues) | problems on Stacks and Queues |
 | [5_Trees_and_Graphs](https://github.com/akormous/super-pro-dsa/tree/master/5_Trees_and_Graphs) | problems on Trees, Graphs, Tries, Heaps |
-| [6_Dynamic_Programming](https://github.com/akormous/super-pro-dsa/tree/master/6_Dynamic_Programming) | problems on DP |
+| [6_Recursion_And_DP](https://github.com/akormous/super-pro-dsa/tree/master/6_Recursion_And_DP) | problems on DP |
 | [7_Bit_Manipulation](https://github.com/akormous/super-pro-dsa/tree/master/7_Bit_Manipulation) | problems on Bit magic |
 | [8_Math_and_Logic_Puzzles](https://github.com/akormous/super-pro-dsa/tree/master/8_Math_and_Logic_Puzzles) | problems on basic Math, logic |
 | [99_Miscellaneous](https://github.com/akormous/super-pro-dsa/tree/master/99_Miscellaneous) | unclassified questions |
