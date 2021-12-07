@@ -2,3 +2,6 @@
 .vscode
 cp_try.cpp
 example.cpp
+6_Recursion_And_DP/BooleanEvaluation.cpp
+6_Recursion_And_DP/ShortestPathInMatrix.cpp
+6_Recursion_And_DP/ShortestPathWithObstacleElimination.cpp
