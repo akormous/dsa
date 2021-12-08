@@ -25,6 +25,15 @@ void printDFS(map<char, vector<char>> graph, char source) {
     return;
 }
 
+// recursive solution for Depth First Search
+void printDFS2(map<char, vector<char>> graph, char source) {
+    cout<<source<<" ";
+
+    for(auto i : graph[source]) {
+        printDFS2(graph, i);
+    }
+        
+}
 int main() {
     // solution
 
@@ -37,7 +46,9 @@ int main() {
     graph['e'] = {};
     graph['f'] = {};
 
-    printDFS(graph, 'a');   // print DFS of the graph starting from source node 'a'
+    printDFS2(graph, 'a');   // print DFS of the graph starting from source node 'a'
+    cout<<endl;
+    printDFS(graph, 'a');
 
     return 0;
 }
