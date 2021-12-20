@@ -9,6 +9,9 @@ Return true if there is a path between a given source and a destination node
 
 class Solution {
 public:
+    /*
+    TIME COMPLEXITY : O(e)  where e is the number of edges
+    */
     bool validPath(int n, vector<vector<int>>& edges, int start, int end) {
         if(n == 1 || start == end)
             return true;
