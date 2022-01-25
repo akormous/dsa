@@ -33,3 +33,32 @@ This repository contains solutions to the problems that I have done on leetcode,
 | [99_Miscellaneous](https://github.com/akormous/super-pro-dsa/tree/master/99_Miscellaneous) | unclassified questions |
 | [System Design](https://github.com/akormous/super-pro-dsa/tree/master/System%20Design) | System Design and Programming concepts |
 [Big O Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14) | Time and Space complexities |
+
+
+## How to measure execution time of a function?
+There is a library named `chrono` in C++ which deals with date and time. You can use `high_resolution_clock` to measure time from a start of a function till the end. Look at the code below.
+```cpp
+#include<chrono>
+#include<iostream>
+
+void func() {
+    auto start = chrono::high_resolution_clock::now();
+
+    /*
+
+    FUNCTION CODE HERE
+
+    */
+
+   auto stop = chrono::high_resolution_clock::now();
+   auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+   std::cout << "Execution Time: " << duration.count() << std::endl;
+}
+
+int main() {
+
+    func();
+    return 0;
+    
+}
+```
