@@ -5,13 +5,15 @@ This simple optimization reduces the time complexities from exponential to polyn
 
 The two main properties of a problem that suggests Dynamic Programming can be applied on it are:
 
-### 1. Overlapping Subproblems
+---
+
+## 1. Overlapping Subproblems
 
 Like Divide and Conquer, Dynamic Programming combines solutions to sub-problems. It is mainly used when solutions to subproblems are needed again and again. Here, computed solutions to subproblems are stored in a table so that these don't have to be recomputed.
 
 There are 2 ways of storing the results of subproblems
 <details>
-    <summary>Memoization (Top Down)</summary>
+<summary>Memoization (Top Down)</summary>
 
 - A lookup array with all values as NIL is initialized
 - Whenever we need a solution to a subproblem, we first look into the lookup table
@@ -21,13 +23,15 @@ There are 2 ways of storing the results of subproblems
 </details>
 
 <details>
-    <summary>Tabulation (Bottom Up)</summary>
+<summary>Tabulation (Bottom Up)</summary>
 
 - It builds the table in a bottom-up fashion and returns the last entry from the table
 - Table is filled from the first entry till last
 </details>
 
-### 2. Optimal Substructure
+---
+
+## 2. Optimal Substructure
 
 A problem has an Optimal Substructure property if optimal solution of the problems can be obtained by using optimal solutions of its subproblems.
 
@@ -36,3 +40,13 @@ If a node _x_ lies in the shortest path from a source node _a_ to destination no
 
 
 
+# Memoization Recipe
+
+## 1. Make it work
+- visualize the problem as a tree
+- implement the tree using recursion
+- test it
+## 2. Make it efficient
+- add a memo object (cache)
+- add a base case to return memo values
+- store return values into the memo
