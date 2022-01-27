@@ -1,4 +1,6 @@
 # Dynamic Programming
+
+
 It is an optimization over plain recursion. If there is a recursive solution that has repeated calls for same inputs, it can be optimized using Dynamic Programming.
 
 This simple optimization reduces the time complexities from exponential to polynomial.
@@ -50,3 +52,12 @@ If a node _x_ lies in the shortest path from a source node _a_ to destination no
 - add a memo object (cache)
 - add a base case to return memo values
 - store return values into the memo
+
+# Tabulation Recipe
+
+- visualize the problem as a table
+- size of the table depends on the inputs
+- initialize the table with default values
+- seed the trivial answer into the table
+- iterate through the table
+- fill further positions based on the current position

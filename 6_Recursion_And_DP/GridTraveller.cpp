@@ -38,23 +38,28 @@ int findNumberOfWaysDP(int m, int n, unordered_map<string, int>& cache) {
 
 // Tabulation
 int findNumberOfWaysDP2(int m, int n, vector<vector<int>>& table) {
-    /* just go left */
-    for(int col = 0; col < n; ++col) {
-        table[0][col] = 1;
-    }
+    
+    // for a grid[1][1], there is only one way
+    table[1][1] = 1;
+        
+    for(int row = 0; row <= m; ++row) {
+        for(int col = 0; col <= n; ++col) {
 
-    /* just go down */
-    for(int row = 0; row < m; ++row) {
-        table[row][0] = 1;
-    }
+            int cur = table[row][col];
 
-    for(int row = 1; row < m; ++row) {
-        for(int col = 1; col < n; ++col) {
-            table[row][col] = table[row-1][col] + table[row][col-1];
+            // add this current value to the right neighbor and down neighbor,
+            // if they are in range
+            // if right neighbor is in range
+            if(col + 1 <= n)
+                table[row][col+1] += cur;
+
+            // if down neighbor is in range
+            if(row + 1 <= m)
+                table[row+1][col] += cur;
         }
     }
-
-    return table[m-1][n-1];
+    
+    return table[m][n];
 }
 
 int main() {
@@ -73,7 +78,7 @@ int main() {
 
     // Tabulation
     // Implement a table like structure which will store the solutions in a bottom-up manner
-    vector<vector<int>> table(m, vector<int>(n, 0));
+    vector<vector<int>> table(m+1, vector<int>(n+1, 0));
     cout<< m << "x" << n << " grid = " << findNumberOfWaysDP2(m, n, table)<<endl;
 
 
