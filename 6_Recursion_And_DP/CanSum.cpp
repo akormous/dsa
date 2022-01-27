@@ -52,10 +52,39 @@ TABULATION
 Time Complexity: 
 Space Complexity: 
 */
+bool canSumTabulation(vector<int> arr, int targetSum) {
+    // create a boolean table/1D array in this case of size targetSum
+    bool dp[targetSum + 1];
+    // initialize all values to false
+    memset(dp, 0, sizeof(dp));
+
+    
+    // there is always a way to make 0 sum (dont take anything from the set of numbers)
+    dp[0] = true;
+    
+    // start from 0 till targetSum
+    for(int i = 0; i <= targetSum; ++i) {
+        // if i can make the current sum,
+        if(dp[i] == true) {
+            // then it is possible to make currentSum + arr[j] where j = 0 to arr.size()
+
+            for(auto j : arr) {
+                if(i + j <= targetSum)
+                    dp[i + j] = true;
+            }
+        }
+
+        if(dp[targetSum] == true)
+            return true;
+    }
+    return false;
+}
+
 void recursion() {
     auto start = chrono::high_resolution_clock::now();
     std::cout << "---------------------------------------\n";
-
+    
+    cout<<"\nRecursion\n";
 
     /*	FUNCTION CODE HERE
     */
@@ -76,7 +105,7 @@ void memoization() {
     auto start = chrono::high_resolution_clock::now();
     std::cout << "---------------------------------------\n";
 
-
+    cout<<"\nMemoization\n";
     /*	FUNCTION CODE HERE
     */
     unordered_map<int,bool> memo;
@@ -93,10 +122,31 @@ void memoization() {
     return ;
 }
 
+void tabulation() {
+    auto start = chrono::high_resolution_clock::now();
+    std::cout << "---------------------------------------\n";
+
+    cout<<"\nTabulation\n";
+    /*	FUNCTION CODE HERE
+    */
+    if( canSumTabulation({7,14}, 243) )
+        cout<<"YES";
+    else
+        cout<<"NO";
+
+
+    auto stop = chrono::high_resolution_clock::now();
+    auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
+    std::cout << "\nExecution Time: " << duration.count() << std::endl;
+    std::cout << "---------------------------------------\n";
+    return ;
+}
+
 int main() {
     // solution
-    
     recursion();
+    //memoization();
+    tabulation();
 
     //memoization();
 
