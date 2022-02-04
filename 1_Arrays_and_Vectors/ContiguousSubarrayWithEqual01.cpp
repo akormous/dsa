@@ -19,43 +19,37 @@ now there can be 2 cases in which we have equal number of 0s and 1s
 */
 class Solution {
 public:
-    
     int findMaxLength(vector<int>& nums) {
         int n = nums.size();
-
-        int maxLen = 0; // length of largest subarray with equal 0s and 1s
-        int endIndex = -1; // index at which the desired subarray ends
-
-        // a map which has cumulative sum as key and index as value
-        unordered_map<int,int> mp;
-
-        // set all 0s to -1
-        for(int i = 0; i < n; i++) 
-            nums[i] = (nums[i] == 0 ? -1 : 1);
-
-        // calculate prefix sum
+        
+        for(int i = 0; i < n; ++i) {
+            if(nums[i] == 0)
+                nums[i] = -1;
+        }
+        int maxLen = 0;
+        
+        // a map which has prefix sum as key and index as val
+        unordered_map<int,int> map;
+        
+        // prefix sum
         int sum = 0;
-        for(int i = 0; i < n; i++) {
+        for(int i = 0; i < n; ++i) {
             sum += nums[i];
-
+            
             // if prefix sum is 0 at some point
             if(sum == 0) {
-                maxLen = i + 1;
-                endIndex = i;
+                maxLen = max(maxLen, i + 1);
             }
-
-            // if this cumulative sum is encountered before
-            if(mp.find(sum) != mp.end()) {
-                // check if length of this subarray is greater than maxLen so far
-                if( i - mp[sum] > maxLen ) {
-                    maxLen= i - mp[sum];
-                    endIndex = i;
-                }
+            
+            // if this prefix sum is encountered before
+            if(map.find(sum) != map.end()) {
+                maxLen = max(maxLen, i - map[sum]);
             }
-            else 
-                mp[ sum ] = i;
+            else {
+                map[sum] = i;
+            } 
+                
         }
-
         return maxLen;
     }
 };
