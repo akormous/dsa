@@ -7,6 +7,15 @@ each unique element can appear at most twice
 */
 class Solution {
 public:
+    int removeDuplicates2(vector<int>& arr) {
+        int i = 0;
+
+        for(int num : arr) {
+            if(i < 2 || num != arr[i-2])
+                arr[i++] = num;
+        }
+        return i;
+    }
     int removeDuplicates(vector<int>& arr) {
         // a reader pointer
         int rp = 0;
