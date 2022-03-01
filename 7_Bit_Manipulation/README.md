@@ -107,13 +107,13 @@ DISCLAIMER: If you don't know what a binary number is, then don't read the rest 
 - which is not equal to `0`, so the 5th bit from right was set
 
 
-<code>
+```cpp
 
     bool getBit(int num, int i) {
         return ((num & (1 << i)) != 0);
     }
 
-</code>
+```
 </details>
 
 
@@ -124,13 +124,13 @@ DISCLAIMER: If you don't know what a binary number is, then don't read the rest 
 - Just shift the 1 to the desired location and do a logical OR
 
 
-<code>
+```cpp
 
     int setBit(int num, int i) {
         return num | (1 << i);
     }
 
-</code>
+```
 </details>
 
 <details>
@@ -139,34 +139,34 @@ DISCLAIMER: If you don't know what a binary number is, then don't read the rest 
 - Very similar to set bit, but here we negate the mask
 - Create a number like `11011111`, then do logical AND
 
-<code>
+```cpp
 
     int clearBit(int num, int i) {
         int mask = ~(1 << i);
         return num & mask;
     }
-</code>
+```
 
 - Clearing bits from MSB to i (inclusive)
 
-<code>
+```cpp
 
     int clearBitMSBThroughI(int num, int i) {
         int mask = (1 << i) - 1;
         return num & mask;
     }
-</code>
+```
 
 
 - Clearing bits from i to 0 (inclusive)
 
-<code>
+```cpp
 
     int clearBitIThrough0(int num, int i) {
         int mask = (-1 << (i + 1));
         return num & mask;
     }
-</code>
+```
 </details>
 
 <details>
@@ -174,12 +174,43 @@ DISCLAIMER: If you don't know what a binary number is, then don't read the rest 
 
 - It is a combination of clear bit and set bit
 
-<code>
+```cpp
 
     int updateBit(int num, int i, bool bit) {
         int val = bit ? 1 : 0;
         int mask = ~(1 << i);
         return (num & mask) | (value << i);
     }
-</code>
+```
 </details>
+
+---
+
+## Brian Kernighan's Algorithm
+A famous algorithm to find the number of set bits in a number.
+
+The main idea behind this algorithm is that when we subtract one from any number, it inverts all the bits after the rightmost set bit.
+For example.
+
+|Number|Binary Representation|
+|---|---|
+|10|01010|
+|9|01001|
+|8|01000|
+|7|00111|
+
+The rightmost set bit also gets inverted along with the numbers right to it.
+
+
+### How can we count the number of set bits?
+
+```cpp
+
+    int cnt = 0;
+    while(num) {
+        cnt++;
+        num = num & num-1;
+    }
+```
+
+`num & num-1` will reverse the rightmost **set** bit. So, all of the set bits are reversed, the loop will run and we get the count.
