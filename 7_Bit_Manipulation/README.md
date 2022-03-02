@@ -213,4 +213,4 @@ The rightmost set bit also gets inverted along with the numbers right to it.
     }
 ```
 
-`num & num-1` will reverse the rightmost **set** bit. So, all of the set bits are reversed, the loop will run and we get the count.
+`num & num-1` will reverse the rightmost **set** bit. So, when all of the set bits will be reversed, the loop will run till the number becomes 0, and we get the count.
