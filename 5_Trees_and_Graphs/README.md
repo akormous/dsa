@@ -53,7 +53,6 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 :star: It has 2<sup>k</sup> - 1 nodes, where k = number of levels in the tree
 </details>
 
-
 ## Binary Heaps
 
 <details>
@@ -232,6 +231,17 @@ There are 2 operations
 - A graph containing 0 cycles is an acyclic graph
 </details>
 
+<details>
+    <summary>Rooted Tree</summary>
+
+- It is a tree with a **designated root node**
+- Every edge either points away from or towards the root node
+- When edges point away from the root -> **arborescence** (out-tree)
+- When edges point away from the root -> **anti-arborescence** (in-tree)
+
+![Rooted Trees](../Resources/RootedTrees.png "Rooted Trees")
+
+</details>
 
 ## Topological Sort
 - It is only for Directed Acyclic Graphs (DAG)
