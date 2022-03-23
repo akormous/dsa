@@ -270,6 +270,7 @@ There are 2 operations
     <summary>Bipartite Graph</summary>
 
 - A **bipartite graph** is one whose vertices can be split into two independent groups U, V such that every edge connects between U and V
+
 ![Bipartite](../Resources/BipartiteGraph.png "Bipartite")
 </details>
 
@@ -277,6 +278,7 @@ There are 2 operations
     <summary>Strongly Connected Components</summary>
 
 - SCCs can be thought of as self-contained cycles within a directed graph where every vertex in a given cycle can reach every other vertex in the same cycle
+
 ![SCCs](../Resources/StronglyConnectedComponents.png "SCCs")
 </details>
 
