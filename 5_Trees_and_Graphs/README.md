@@ -133,7 +133,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 ---
 
-### Introduction to Fenwick and Segment Trees
+## Introduction to Fenwick and Segment Trees
 
 - Consider an `arr[0 ... n-1]`
 - We want to do 2 operations on this array
@@ -148,7 +148,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 ## Segment Tree
 
 <details>
-    <summary></summary>
+    <summary>To be updated</summary>
 </details>
 
 ## Fenwick Tree / Binary Indexed Tree
@@ -210,25 +210,23 @@ There are 2 operations
 
 - A tree is a connected graph without cycles.
 - A graph is a collection of nodes with edges between them
+
+## Theory
 <details>
     <summary>Directed and Undirected</summary>
 
 - Directed edge, one way
 - Undirected edge, two way
+
+![Directed and Undirected](../Resources/DirectedAndUndirectedGraph.png "Directed and Undirected")
 </details>
 
 <details>
-    <summary>Connected and Disconnected</summary>
+    <summary>Weighted</summary>
 
-- If there is a path from any point to any other point in the graph, it is called a connected graph
-- If there exists multiple disconnected vertices and edges, then it is called a disconnected graph
-</details>
+- Every edge has a weight assigned to it
 
-<details>
-    <summary>Cyclic and Acyclic</summary>
-
-- If a graph contains cycles, then it is called a cyclic graph
-- A graph containing 0 cycles is an acyclic graph
+![Weighted](../Resources/WeightedGraph.png "Weighted Graph")
 </details>
 
 <details>
@@ -242,6 +240,47 @@ There are 2 operations
 ![Rooted Trees](../Resources/RootedTrees.png "Rooted Trees")
 
 </details>
+
+<details>
+    <summary>Connected and Disconnected</summary>
+
+- If there is a path from any point to any other point in the graph, it is called a connected graph
+- If there exists multiple disconnected vertices and edges, then it is called a disconnected graph
+
+![Connected and Disconneted](../Resources/ConnectedAndDisconnectedGraph.png "Connected and Disconnected")
+</details>
+
+<details>
+    <summary>Cyclic and Acyclic</summary>
+
+- If a graph contains cycles, then it is called a cyclic graph
+- A graph containing 0 cycles is an acyclic graph
+
+![Cyclic Acyclic](../Resources/CyclicAndAcyclicGraph.png "Cyclic Acyclic")
+</details>
+
+<details>
+    <summary>Directed Acyclic Graph (DAGs)</summary>
+
+- **Directed graphs with no cycles**
+- These graphs play an important role in representing structures with dependencies
+</details>
+
+<details>
+    <summary>Bipartite Graph</summary>
+
+- A **bipartite graph** is one whose vertices can be split into two independent groups U, V such that every edge connects between U and V
+![Bipartite](../Resources/BipartiteGraph.png "Bipartite")
+</details>
+
+<details>
+    <summary>Strongly Connected Components</summary>
+
+- SCCs can be thought of as self-contained cycles within a directed graph where every vertex in a given cycle can reach every other vertex in the same cycle
+![SCCs](../Resources/StronglyConnectedComponents.png "SCCs")
+</details>
+
+---
 
 ## Topological Sort
 - It is only for Directed Acyclic Graphs (DAG)
