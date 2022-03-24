@@ -21,19 +21,19 @@ If you are familiar with C++ but don't know STL, [click here](https://medium.com
 This repository contains solutions to the problems that I have done on leetcode, geeksforgeeks and... you know all the other websites.
 | Directory | Description |
 | ---       | ---         |
-| [0_Basics](https://github.com/akormous/super-pro-dsa/tree/master/0_Basics) | contains implementation of all the basic Data Structures and Algorithms |
-| [1_Arrays_and_Vectors](https://github.com/akormous/super-pro-dsa/tree/master/1_Arrays_and_Vectors) | problems on arrays, vectors, matrices |
-| [2_LinkedList](https://github.com/akormous/super-pro-dsa/tree/master/2_LinkedList) | problems on linked lists |
-| [3_Strings](https://github.com/akormous/super-pro-dsa/tree/master/3_Strings) | problems on strings |
-| [4_Stacks_and_Queues](https://github.com/akormous/super-pro-dsa/tree/master/4_Stacks_and_Queues) | problems on Stacks and Queues |
-| [5_Trees_and_Graphs](https://github.com/akormous/super-pro-dsa/tree/master/5_Trees_and_Graphs) | problems on Trees, Graphs, Tries, Heaps |
-| [6_Recursion_And_DP](https://github.com/akormous/super-pro-dsa/tree/master/6_Recursion_And_DP) | problems on DP |
-| [7_Bit_Manipulation](https://github.com/akormous/super-pro-dsa/tree/master/7_Bit_Manipulation) | problems on Bit magic |
-| [8_Math_and_Logic_Puzzles](https://github.com/akormous/super-pro-dsa/tree/master/8_Math_and_Logic_Puzzles) | problems on basic Math, logic |
-| [99_Miscellaneous](https://github.com/akormous/super-pro-dsa/tree/master/99_Miscellaneous) | unclassified questions |
-| [System Design](https://github.com/akormous/super-pro-dsa/tree/master/System%20Design) | System Design and Programming concepts |
+| [0_Basics](https://github.com/akormous/super-pro-dsa/tree/master/0_Basics) | Implementation of all the basic Data Structures and Algorithms |
+| [1_Arrays_and_Vectors](https://github.com/akormous/super-pro-dsa/tree/master/1_Arrays_and_Vectors) | Arrays, Vectors, Matrices |
+| [2_LinkedList](https://github.com/akormous/super-pro-dsa/tree/master/2_LinkedList) | Linked Lists |
+| [3_Strings](https://github.com/akormous/super-pro-dsa/tree/master/3_Strings) | Strings |
+| [4_Stacks_and_Queues](https://github.com/akormous/super-pro-dsa/tree/master/4_Stacks_and_Queues) | Stacks and Queues |
+| [5_Trees_and_Graphs](https://github.com/akormous/super-pro-dsa/tree/master/5_Trees_and_Graphs) | Trees, Graphs, Tries, Heaps |
+| [6_Recursion_And_DP](https://github.com/akormous/super-pro-dsa/tree/master/6_Recursion_And_DP) | Recursion and Dynamic Programming |
+| [7_Bit_Manipulation](https://github.com/akormous/super-pro-dsa/tree/master/7_Bit_Manipulation) | Bit magic |
+| [8_Math_and_Logic_Puzzles](https://github.com/akormous/super-pro-dsa/tree/master/8_Math_and_Logic_Puzzles) | Basic Math, Logic |
+| [99_Miscellaneous](https://github.com/akormous/super-pro-dsa/tree/master/99_Miscellaneous) | Unclassified Problems |
 [Big O Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14) | Time and Space complexities |
 
+---
 
 ## How to measure execution time of a function?
 There is a library named `chrono` in C++ which deals with date and time. You can use `high_resolution_clock` to measure time from a start of a function till the end. Look at the code below.

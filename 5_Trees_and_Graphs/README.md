@@ -284,6 +284,42 @@ There are 2 operations
 
 ---
 
+# Algorithms
+
+## Depth-first Search
+[DFS code](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/Trees_and_Graphs/DFS.cpp)
+<details>
+    <summary>What can DFS do?</summary>
+
+- Compute a graph's minimum spanning tree
+- Detect and find cycles in a graph
+- Check if a graph is bipartite
+- Find strongly connected components
+- Topologically sort the nodes of a graph
+- Find bridges and articulation points
+- Find augmenting paths in a flow network
+- Generate mazes
+</details>
+<details>
+    <summary>Time Complexity</summary>
+
+`O(V + E)`
+</details>
+
+## Breadth-first Search
+[DFS code](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/Trees_and_Graphs/BFS.cpp)
+<details>
+    <summary>What can BFS do?</summary>
+
+- Find shortest path on unweighted graph
+- Number of Islands in a grid, quite popular problem
+</details>
+<details>
+    <summary>Time Complexity</summary>
+
+`O(V + E)`
+</details>
+
 ## Topological Sort
 - It is only for Directed Acyclic Graphs (DAG)
 - It is a linear ordering of vertices such that for every directed edge _(u,v)_ , vertex _u_ comes before _v_ in the ordering
