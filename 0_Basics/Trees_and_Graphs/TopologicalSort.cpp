@@ -61,6 +61,55 @@ class Solution
 	}
 };
 
+/*
+
+Recursive DFS solution
+
+*/
+class Solution
+{
+	public:
+	
+	int dfs(int cur, int pos, vector<int>& ordering, vector<bool>& visited, vector<int> adj[]) {
+	    // visit cur node
+	    visited[cur] = true;
+	    
+        // for each unvisited neighbor, call dfs
+	    for(int neighbor : adj[cur])
+	        if(!visited[neighbor])
+	            pos = dfs(neighbor, pos, ordering, visited, adj);
+	    
+        // fill the cur node at pos
+	    ordering[pos] = cur;
+        // decrement pos, as we are filling from right to left, return it
+	    return pos - 1;
+	    
+	}
+	
+	//Function to return list containing vertices in Topological order. 
+	vector<int> topoSort(int V, vector<int> adj[]) 
+	{
+	    // code here
+	    vector<bool> visited(V, 0);
+	    
+	    // topological sort order
+	    vector<int> ordering(V, 0);
+	    
+        // start filling the order from last position in ordering array
+	    int orderPos = V-1;
+	    
+        // start from node 0 till V-1
+	    for(int curNode = 0; curNode < V; ++curNode) {
+	        // if cur node is visited, skip
+	        if(visited[curNode])  continue;
+	        
+            // call dfs at cur node, and get the next pos to fill in ordering
+	        orderPos = dfs(curNode, orderPos, ordering, visited, adj);
+	    }
+	    return ordering;
+	}
+};
+
 // { Driver Code Starts.
 
 /*  Function to check if elements returned by user
