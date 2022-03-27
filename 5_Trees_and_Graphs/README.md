@@ -69,7 +69,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 * A min-heap is a *complete* binary tree, where each node is smaller than its children
 * The root is the minimum element in the tree
 * There are 2 key operations on min-heap `insert` and `extract_min`
-* [Min Heap Implementation](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/MinHeap.cpp)
+* [Min Heap Implementation](../0_Basics/MinHeap.cpp)
 
 `insert`
 - Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
@@ -90,7 +90,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 * A max-heap is a *complete* binary tree, where each node is larger than its children
 * The root is the maximum element in the tree
 * There are 2 key operations on max-heap `insert` and `extract_max`
-* [Max Heap Implementation](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/MaxHeap.cpp)
+* [Max Heap Implementation](../0_Basics/MaxHeap.cpp)
 
 `insert`
 - Insert the new element at the bottomost rightmost spot (as to maintain the complete binary tree property)
@@ -125,7 +125,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
     - A value, which might be NULL
     - An array of reference to child nodes which also might be NULL
 
-* [Trie Implementation](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/Trie.cpp)
+* [Trie Implementation](../0_Basics/Trie.cpp)
 
 ![Trie](../Resources/Trie.png "Trie Data Structure Example")
 
@@ -198,7 +198,7 @@ There are 2 operations
 - To update the prefix sum array in `O(logn)` time
 </details>
 
-[Fenwick Tree Implementation](https://github.com/akormous/super-pro-dsa/blob/master/5_Trees_and_Graphs/FenwickTree.cpp)
+[Fenwick Tree Implementation](./FenwickTree.cpp)
 
 ---
 
@@ -287,7 +287,7 @@ There are 2 operations
 # Algorithms
 
 ## Depth-first Search
-[DFS code](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/Trees_and_Graphs/DFS.cpp)
+[DFS code](../0_Basics/Trees_and_Graphs/DFS.cpp)
 <details>
     <summary>What can DFS do?</summary>
 
@@ -306,8 +306,10 @@ There are 2 operations
 `O(V + E)`
 </details>
 
+---
+
 ## Breadth-first Search
-[DFS code](https://github.com/akormous/super-pro-dsa/blob/master/0_Basics/Trees_and_Graphs/BFS.cpp)
+[BFS code](../0_Basics/Trees_and_Graphs/BFS.cpp)
 <details>
     <summary>What can BFS do?</summary>
 
@@ -320,12 +322,37 @@ There are 2 operations
 `O(V + E)`
 </details>
 
+---
+
 ## Topological Sort
+[Topological Sort Code](../0_Basics/Trees_and_Graphs/TopologicalSort.cpp)
 - It is only for Directed Acyclic Graphs (DAG)
 - It is a linear ordering of vertices such that for every directed edge _(u,v)_ , vertex _u_ comes before _v_ in the ordering
-
+- Time Complexity = `O(V + E)`
 <details>
     <summary>Applications</summary>
 
-- Finding the order of installation of dependencies in any project (Software, Hardware, Automobile Manufacturing and whatever you can think of as a DAG)
+- School class prerequisites
+- Program dependencies
+- Event Scheduling
+- Assembly Instructions
 </details>
+
+---
+
+## Single-Source Shortest Path in a DAG
+[SSSPDAG Code](../0_Basics/Trees_and_Graphs/SSSP.cpp)
+- Popular application of Topological Sort
+- Find the shortest path from one given source node to every other node in the graph
+- Only valid for DAGs though
+
+---
+
+## Dijkstra's Algorithm
+[Dijkstra's Code](../0_Basics/Trees_and_Graphs/DijkstrasAlgorithm.cpp)
+- SSSP Algorithm for graphs with **non-negative edge weights**
+- Time Complexity = `O(E * log(V))`
+- :warning: NOTE: One constraint for Dijkstra's algorithm is that the graph must contain **non-negative edge weights**.
+- This constraint is imposed to ensure that once a node has been visited its optimal distance cannot be improved
+- This property enables Dijkstra's algorithm to act in a greedy manner by always selecting the next most promising node
+
