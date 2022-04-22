@@ -5,8 +5,8 @@ using namespace std;
 BINARY TREE - a tree where every node can have atmost 2 child nodes
 
 Properties - 
-a) Maximum number of nodes at a level 'l' = 2(l) - 1
-b) Maximum number of nodes in a tree of height 'h' = 2(h) - 1
+a) Maximum number of nodes at a level 'l' = 2^(l - 1)
+b) Maximum number of nodes in a tree of height 'h' = 2^h - 1
 c) In a binary tree with 'n' nodes,
     minimum possible height OR minimum number of levels = ceil( log(n + 1) )
 d) A binary tree with 'L' leaves has at least [ ceil( log(L) ) + 1 ] levels
