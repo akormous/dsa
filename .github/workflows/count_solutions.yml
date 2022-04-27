@@ -1,0 +1,8 @@
+name: count number of solutions
+on:
+  push:
+    branches: 
+      - 'master'
+jobs:
+  count_solutions:
+    name: Count CPP files
