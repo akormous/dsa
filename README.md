@@ -1,24 +1,11 @@
 
-# Super-pro-DSA
-
-## [Click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for good luck :wink:
-
-## Everything here is in C++
+# Data Structures and Algorithms in C++
 
 If you are not familiar with C++, [click here](https://github.com/jwasham/coding-interview-university/blob/main/extras/cheat%20sheets/Cpp_reference.pdf)
 
 If you are familiar with C++ but don't know STL, [click here](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
 
-## Books
-- [Cracking the Coding Interview](https://www.crackingthecodinginterview.com/)
-
----
-
-![practice_on_leetcode.jpg](Resources/meme.jpg "Instead of looking at this meme, invest your time in practicing on leetcode")
-
----
-
-This repository contains solutions to the problems that I have done on leetcode, geeksforgeeks and... you know all the other websites.
+## Table of contents
 | Directory | Description |
 | ---       | ---         |
 | [0_Basics](https://github.com/akormous/super-pro-dsa/tree/master/0_Basics) | Implementation of all the basic Data Structures and Algorithms |
@@ -35,30 +22,9 @@ This repository contains solutions to the problems that I have done on leetcode,
 
 ---
 
-## How to measure execution time of a function?
-There is a library named `chrono` in C++ which deals with date and time. You can use `high_resolution_clock` to measure time from a start of a function till the end. Look at the code below.
-```cpp
-#include<chrono>
-#include<iostream>
+## Get Started
+- [Cracking the Coding Interview](https://www.crackingthecodinginterview.com/)
 
-void func() {
-    auto start = chrono::high_resolution_clock::now();
 
-    /*
 
-    FUNCTION CODE HERE
-
-    */
-
-   auto stop = chrono::high_resolution_clock::now();
-   auto duration = chrono::duration_cast<chrono::microseconds>(stop - start);
-   std::cout << "Execution Time: " << duration.count() << std::endl;
-}
-
-int main() {
-
-    func();
-    return 0;
-    
-}
-```
+[Click here](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for good luck :wink:
