@@ -350,6 +350,18 @@ There are 2 operations
 
 ## Dijkstra's Algorithm
 [Dijkstra's Code](../0_Basics/Trees_and_Graphs/DijkstrasAlgorithm.cpp)
+
+<details>
+    <summary>Algorithm</summary>
+
+- Maintain a 'dist' array where the distance to every node is +ve infinity. Mark the distance to the start node 's' to be 0.
+- Maintain a PQ of key-value pairs of (node_index, distance) pairs which tell you which node to visit next based on sorted min value.
+- Insert (s,0) into the PQ and loop while PQ is not empty pulling out the next most promising (node_index, distance) pair.
+- Iterate over all edges outwards from the current node and relax each edge appending a new (node_index, distance) key-value pair to the PQ for every relaxation.
+</details>
+
+---
+
 - SSSP Algorithm for graphs with **non-negative edge weights**
 - Time Complexity = `O(E * log(V))`
 - :warning: NOTE: One constraint for Dijkstra's algorithm is that the graph must contain **non-negative edge weights**.
