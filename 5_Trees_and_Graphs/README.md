@@ -368,3 +368,26 @@ There are 2 operations
 - This constraint is imposed to ensure that once a node has been visited its optimal distance cannot be improved
 - This property enables Dijkstra's algorithm to act in a greedy manner by always selecting the next most promising node
 
+---
+
+## Bellman-Ford Algorithm
+[Bellman-Ford code](../0_Basics/Trees_and_Graphs/BellmanFord.cpp)
+
+<details>
+    <summary>Algorithm</summary>
+
+- v = number of nodes in the graph
+- e = number of edges in the graph
+- s = starting node
+- dist[] = distance to each node from 's'
+- Maintain a 'dist' array of size v, initially the distance to each node is +ve infinity
+- Set the distance to starting node as 0
+- Relax each edge v-1 times
+- Why v-1 times? Because we don't know the sequence in which the edges will be processed, since the longest path can be v-1 nodes long, to consider all the edges we run it v-1 times.
+- For more clarification [Why do we need to relax all the edges v-1 times in Bellman-Ford?](https://riptutorial.com/algorithm/example/24029/why-do-we-need-to-relax-all-the-edges-at-most--v-1--times)
+</details>
+
+---
+- SSSP algorithm that can **detect negative cycles**
+- Time Complexity - `O(EV)`
+- When to use? When the graph has negative cycles because Dijkstra's can't handle negative edge weights
