@@ -7,8 +7,8 @@ DOUBLY LINKED LIST- every node has a pointer to its previous and next node
 TIME COMPLEXITY- 
         Access - O(n)
         Search - O(n)
-        Insertion - O(1)
-        Deletion  - O(1)
+        Insertion - O(1)    // at the begin or end
+        Deletion  - O(n)    // deletion by val
 SPACE COMPLEXITY- O(n)
 */
 
