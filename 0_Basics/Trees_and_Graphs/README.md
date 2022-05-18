@@ -391,3 +391,50 @@ There are 2 operations
 - SSSP algorithm that can **detect negative cycles**
 - Time Complexity - `O(EV)`
 - When to use? When the graph has negative cycles because Dijkstra's can't handle negative edge weights
+
+---
+
+# Bridges and Articulation Points
+
+## Bridge
+A bridge/cut edge is any **edge** in a graph whose removal increases the number of connected components
+
+## Articulation point
+An articulation point/cut vertex is any **node** in a graph whose removal increases the number of connected components
+
+```mermaid
+flowchart LR
+node0((0))
+node1((1))
+node2((2))
+node3((3))
+node4((4))
+node5((5))
+node6((6))
+node7((7))
+node8((8))
+
+node0 --- node1
+node0 --- node2
+node1 --- node2
+node2 --- node3
+node3 --- node4
+node2 --- node5
+node5 --- node6
+node5 --- node8
+node6 --- node7
+node7 --- node8
+```
+
+In the above graph
+*Bridges - {2,3}, {3,4}, {2,5}* and
+*Articulation points - {2}, {5}, {3}*
+
+## Significance of bridges and articulation points
+Bridges and articulation points are important because they often hint at *weak points*, *bottlenecks* or *vulnerabilities* in a graph. Therefore it is important to be able to quickly find/detect when and where these occur.
+
+## Low-link value
+The low-link value of a node is the smallest (lowest) id reachable from that node when doing a DFS (including itself)
+
+## Tarjans Algorithm for finding bridges
+Code - [Find Bridges](./BridgesAndArticulationPoints.cpp)
