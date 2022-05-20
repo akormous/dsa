@@ -3,38 +3,22 @@ using namespace std;
 
 class Solution {
 public:
-    int uniquePathsWithObstacles(vector<vector<int>>& grid) {
-        // number of rows
-        int m = grid.size();
-        // number of cols
-        int n = grid[0].size();
+    int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+        int m = obstacleGrid.size();
+        int n = obstacleGrid[0].size();
         
-        int dp[m][n];
+        if(obstacleGrid[0][0] == 1 || obstacleGrid[m-1][n-1] == 1)
+            return 0;
         
-        // going down down down
-        bool flag = 0;
-        for(int i = 0; i < m; i++) {
-            if(grid[i][0] == 1)
-                flag = 1;
-            
-            dp[i][0] = flag == 1? 0 : 1;
-        }
-        // going right right right
-        flag = 0;
-        for(int j = 0; j < n; j++) {
-            if(grid[0][j] == 1)
-                flag = 1;
-            dp[0][j] = flag == 1? 0 : 1;
-        }
+        vector<vector<int>> dp(m+1, vector<int>(n+1, 0));   // dp[m+1][n+1] - this allows us to write only 1 for loop
         
-        for(int i = 1; i < m; i++) {
-            for(int j = 1; j < n; j++) {
-                if(grid[i][j] == 1)
-                    dp[i][j] = 0;
-                else
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+        dp[0][1] = 1;   // just to make sure that dp[1][1] (which actually represents grid[0][0]) has a start
+        for(int i = 1; i <= m; ++i) {
+            for(int j = 1; j <= n; ++j) {
+                if(obstacleGrid[i-1][j-1] == 0) // if there is NO obstacle at current position
+                    dp[i][j] = dp[i-1][j] + dp[i][j-1]; // then number of path = diagonal up + diagonal left
             }
         }
-        return dp[m-1][n-1];
+        return dp[m][n];
     }
 };
