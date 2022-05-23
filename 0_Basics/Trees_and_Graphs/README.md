@@ -127,7 +127,7 @@ DISCLAIMER: If you don't know what a tree is, don't read the rest of this page.
 
 * [Trie Implementation](../0_Basics/Trie.cpp)
 
-![Trie](../Resources/Trie.png "Trie Data Structure Example")
+![Trie](../../Resources/Trie.png "Trie Data Structure Example")
 
 </details>
 
@@ -180,7 +180,7 @@ There are 2 operations
             - How to go to the parent ? By removing the right most set bit
             - `index` = `index - (index & (-index))`
     - Return `sum`
-![Fenwick getSum()](../Resources/FenwickGetSum.png "Fenwick getSum()")
+![Fenwick getSum()](../../Resources/FenwickGetSum.png "Fenwick getSum()")
 2. `update(x, val)` - Update the Binary Indexed Tree by performing `arr[index] += val`, it will make changes to `BITree[]`
     - Initialize current index as `x + 1`
     - Do the following while the current index is smaller than or equal to `n`
@@ -188,7 +188,7 @@ There are 2 operations
         - Go to the next element of `BITree[index]`
             - The next element can be obtained by incrementing the last set bit of the current index
             - `index = index + (index & (-index))`
-![Fenwick update()](../Resources/FenwickUpdate.png "Fenwick update()")
+![Fenwick update()](../../Resources/FenwickUpdate.png "Fenwick update()")
 </details>
 
 <details>
@@ -218,7 +218,7 @@ There are 2 operations
 - Directed edge, one way
 - Undirected edge, two way
 
-![Directed and Undirected](../Resources/DirectedAndUndirectedGraph.png "Directed and Undirected")
+![Directed and Undirected](../../Resources/DirectedAndUndirectedGraph.png "Directed and Undirected")
 </details>
 
 <details>
@@ -226,7 +226,7 @@ There are 2 operations
 
 - Every edge has a weight assigned to it
 
-![Weighted](../Resources/WeightedGraph.png "Weighted Graph")
+![Weighted](../../Resources/WeightedGraph.png "Weighted Graph")
 </details>
 
 <details>
@@ -237,7 +237,7 @@ There are 2 operations
 - When edges point away from the root -> **arborescence** (out-tree)
 - When edges point away from the root -> **anti-arborescence** (in-tree)
 
-![Rooted Trees](../Resources/RootedTrees.png "Rooted Trees")
+![Rooted Trees](../../Resources/RootedTrees.png "Rooted Trees")
 
 </details>
 
@@ -247,7 +247,7 @@ There are 2 operations
 - If there is a path from any point to any other point in the graph, it is called a connected graph
 - If there exists multiple disconnected vertices and edges, then it is called a disconnected graph
 
-![Connected and Disconneted](../Resources/ConnectedAndDisconnectedGraph.png "Connected and Disconnected")
+![Connected and Disconneted](../../Resources/ConnectedAndDisconnectedGraph.png "Connected and Disconnected")
 </details>
 
 <details>
@@ -256,7 +256,7 @@ There are 2 operations
 - If a graph contains cycles, then it is called a cyclic graph
 - A graph containing 0 cycles is an acyclic graph
 
-![Cyclic Acyclic](../Resources/CyclicAndAcyclicGraph.png "Cyclic Acyclic")
+![Cyclic Acyclic](../../Resources/CyclicAndAcyclicGraph.png "Cyclic Acyclic")
 </details>
 
 <details>
@@ -271,7 +271,7 @@ There are 2 operations
 
 - A **bipartite graph** is one whose vertices can be split into two independent groups U, V such that every edge connects between U and V
 
-![Bipartite](../Resources/BipartiteGraph.png "Bipartite")
+![Bipartite](../../Resources/BipartiteGraph.png "Bipartite")
 </details>
 
 <details>
@@ -279,7 +279,7 @@ There are 2 operations
 
 - SCCs can be thought of as self-contained cycles within a directed graph where every vertex in a given cycle can reach every other vertex in the same cycle
 
-![SCCs](../Resources/StronglyConnectedComponents.png "SCCs")
+![SCCs](../../Resources/StronglyConnectedComponents.png "SCCs")
 </details>
 
 ---
@@ -287,7 +287,7 @@ There are 2 operations
 # Algorithms
 
 ## Depth-first Search
-[DFS code](../0_Basics/Trees_and_Graphs/DFS.cpp)
+[DFS code](./DFS.cpp)
 <details>
     <summary>What can DFS do?</summary>
 
@@ -309,7 +309,7 @@ There are 2 operations
 ---
 
 ## Breadth-first Search
-[BFS code](../0_Basics/Trees_and_Graphs/BFS.cpp)
+[BFS code](./BFS.cpp)
 <details>
     <summary>What can BFS do?</summary>
 
@@ -325,7 +325,7 @@ There are 2 operations
 ---
 
 ## Topological Sort
-[Topological Sort Code](../0_Basics/Trees_and_Graphs/TopologicalSort.cpp)
+[Topological Sort Code](./TopologicalSort.cpp)
 - It is only for Directed Acyclic Graphs (DAG)
 - It is a linear ordering of vertices such that for every directed edge _(u,v)_ , vertex _u_ comes before _v_ in the ordering
 - Time Complexity = `O(V + E)`
@@ -341,7 +341,7 @@ There are 2 operations
 ---
 
 ## Single-Source Shortest Path in a DAG
-[SSSPDAG Code](../0_Basics/Trees_and_Graphs/SSSP.cpp)
+[SSSPDAG Code](./ShortestPathDAG.cpp)
 - Popular application of Topological Sort
 - Find the shortest path from one given source node to every other node in the graph
 - Only valid for DAGs though
@@ -349,7 +349,7 @@ There are 2 operations
 ---
 
 ## Dijkstra's Algorithm
-[Dijkstra's Code](../0_Basics/Trees_and_Graphs/DijkstrasAlgorithm.cpp)
+[Dijkstra's Code](./DijkstrasAlgorithm.cpp)
 
 <details>
     <summary>Algorithm</summary>
@@ -371,7 +371,7 @@ There are 2 operations
 ---
 
 ## Bellman-Ford Algorithm
-[Bellman-Ford code](../0_Basics/Trees_and_Graphs/BellmanFord.cpp)
+[Bellman-Ford code](./BellmanFord.cpp)
 
 <details>
     <summary>Algorithm</summary>
@@ -437,4 +437,4 @@ Bridges and articulation points are important because they often hint at *weak p
 The low-link value of a node is the smallest (lowest) id reachable from that node when doing a DFS (including itself)
 
 ## Tarjans Algorithm for finding bridges
-Code - [Find Bridges](./BridgesAndArticulationPoints.cpp)
+Code - [Find Bridges](./FindBridgesInAGraph.cpp)
