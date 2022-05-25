@@ -51,7 +51,7 @@ class Solution
     int longestSubsequence(int n, int a[])
     {
        // your code here
-       vector<int> seq;
+       vector<int> seq; // maintaining a sorted sequence
        // insert the first element in the sequence
        seq.push_back(a[0]);
        
