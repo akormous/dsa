@@ -199,3 +199,54 @@ int main() {
 
 
   // } Driver Code Ends
+// leetcode version
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
+class Solution {
+public:
+    void dfs(TreeNode* root, int x, int y, map<int, map<int, multiset<int>>>& nodes) {
+        if(root == nullptr) return;
+        
+        nodes[x][y].insert(root->val);
+        dfs(root->left, x-1, y+1, nodes);
+        dfs(root->right, x+1, y+1, nodes);
+    }
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        // maps x,y to node values, in a sorted manner
+        // maps hd(x) to another map 
+        // which takes in y(vertical distance, starting from 0 to height of the tree)
+        // so all nodes at every unique x,y will be sorted since we are using a multiset
+        map<int, map<int, multiset<int>>> nodes;
+        
+        dfs(root, 0, 0, nodes);
+        vector<vector<int>> result;
+        
+        for(auto& hd : nodes) {
+            vector<int> col;   // append all the node vals at every vertical dist
+            // basically traversing the y-axis
+            for(auto& vd : hd.second) {
+                col.insert(col.end(), vd.second.begin(), vd.second.end());
+            }
+            result.push_back(col);
+        }
+        return result;
+    }
+};
