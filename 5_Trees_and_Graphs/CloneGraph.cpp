@@ -72,3 +72,26 @@ public:
         return mp[1];
     }
 };
+
+/*
+Depth First Search - Approach Easier to understand
+*/
+class Solution2 {
+    unordered_map<Node*, Node*> copies;     // maps original node to copy
+public:
+    Node* cloneGraph(Node* node) {
+        if(!node)
+            return nullptr;
+        
+        // if current node is not cloned
+        if(copies.find(node) == copies.end()) {
+            // clone it
+            copies[node] = new Node(node->val, {});
+            // go to each neighbor of this node and push the neighbors
+            for(auto& n : node->neighbors) {
+                copies[node]->neighbors.push_back( cloneGraph(n) ); 
+            }
+        }
+        return copies[node];
+    }
+};
