@@ -394,6 +394,32 @@ There are 2 operations
 
 ---
 
+## Floyd-Warshall Algorithm
+[Floyd-Warshall code](./FloydWarshall.cpp)
+
+<details>
+    <summary>Algorithm</summary>
+
+- The Memo Table: it will be 3-D matrix `dp[k][i][j]`
+- which stores shortest path from `i` to `j` routing through `0` to `k` nodes
+- specifically, `dp[n-1]` is the 2-D matrix solution we are looking for
+- when `k = 0`, `dp[0][i][j] = adj[i][j]`
+- otherwise, `dp[k][i][j] = min(dp[k-1][i][j], dp[k-1][i][k] + dp[k-1][k][j])`
+- we can convert memo table to 2-D, by changing the values in place, rather than storing the state `k-1`
+- so it reduces to, when `k = 0`, `dp[i][j] = adj[i][j]`
+- otherwise, `dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j])`
+</details>
+
+---
+
+- This is an all-pairs shortest path algorithm.
+- It finds the shortest distance between all pairs of nodes
+- Time Complexity - `O(V^3)`
+- ideal for graphs no larger than a couple of hundred nodes
+- it can detect negative cycles
+
+---
+
 # Bridges and Articulation Points
 
 ## Bridge
@@ -438,3 +464,4 @@ The low-link value of a node is the smallest (lowest) id reachable from that nod
 
 ## Tarjans Algorithm for finding bridges
 Code - [Find Bridges](./FindBridgesInAGraph.cpp)
+
