@@ -465,3 +465,45 @@ The low-link value of a node is the smallest (lowest) id reachable from that nod
 ## Tarjans Algorithm for finding bridges
 Code - [Find Bridges](./FindBridgesInAGraph.cpp)
 
+---
+
+# Eulerian Path and Circuit
+
+## Eulerian Path
+An Eulerian Path is a path of edges that visits all the edges in a graph exactly once.
+
+## Eulerian Circuit
+An Eulerian Circuit is an Eulerian Path which starts and ends on the same vertex.
+
+## What condition are required for a valid Eulerian Path/Circuit?
+
+Depends on the kind of graph:
+<details>
+    <summary>Undirected Graph</summary>
+
+**Eulerian Circuit**
+
+- Every vertex has an even degree
+
+**Eulerian Path**
+
+- Either every vertex has even degree 
+- Or exactly 2 vertices have odd degrees
+</details>
+
+<details>
+    <summary>Directed Graph</summary>
+
+**Eulerian Circuit**
+
+- Every vertex has **equal** indegree and outdegree
+
+**Eulerian Path**
+
+- At most 1 vertex has `(outDegree - inDegree) = 1` and at most 1 vertex has `(inDegree - outDegree) = 1` and all other vertices have equal in and out degrees
+</details>
+
+
+**Finding an Eulerian Path - Time Complexity - `O(E)`**
+
+Code - [Reconstruct Itinerary LC332](./EulerianPath.cpp)
